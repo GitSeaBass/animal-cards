@@ -5,13 +5,13 @@ const port = process.env.PORT || 8082;
 const mongoose = require('mongoose');
 const cors = require('cors');
 
-//const packs = require('./routes/api/packs');
+const packs = require('./routes/api/packs');
 
 //Connect to Database
 app.use(cors({origin:true, credentials: true}));
 app.use(express.json({extended: false}));
 
-//app.use('/api/packs', packs);
+app.use('/api/packs', packs);
 
 const conn_str = 'mongodb+srv://SeaBass:mongopassword@cluster0.tgw2hc0.mongodb.net/';
 
