@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 
 const port = process.env.PORT || 8082;
+
 const mongoose = require('mongoose');
 const cors = require('cors');
 
@@ -13,7 +14,7 @@ app.use(express.json({extended: false}));
 
 app.use('/api/packs', packs);
 
-const conn_str = 'mongodb+srv://SeaBass:mongopassword@cluster0.tgw2hc0.mongodb.net/';
+const conn_str = 'mongodb+srv://SeaBass:mongopassword@cluster0.tgw2hc0.mongodb.net/packs?retryWrites=true&w=majority';
 
 mongoose.set('strictQuery', false);
 mongoose.connect(conn_str, {
