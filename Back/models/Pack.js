@@ -11,28 +11,34 @@ const PackSchema = new mongoose.Schema({
     },
     cards: [{
         common: [{
-            card: {
-                type: String
-            },
-            chance: {
-                type: Number
-            }
+            card: [{
+                image: {
+                    type: String,
+                },
+                chance: {
+                    type: Number
+                }
+            }]
         }],
         rare: [{
-            card: {
-                type: String
-            },
-            chance: {
-                type: Number
-            }
+            card: [{
+                image: {
+                    type: String,
+                },
+                chance: {
+                    type: Number
+                }
+            }]
         }],
         legend: [{
-            card: {
-                type: String
-            },
-            chance: {
-                type: Number
-            }
+            card: [{
+                image: {
+                    type: String,
+                },
+                chance: {
+                    type: Number
+                }
+            }]
         }]
     }]
 });
