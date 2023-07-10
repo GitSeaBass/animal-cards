@@ -9,18 +9,18 @@ const PackSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    cards: [{
-        common: [{
-            card: [{
-                image: {
+    cards: {
+        common: {
+            card: {
+                images: [{
                     type: String,
-                },
-                chance: {
-                    type: Number
-                }
-            }]
-        }],
-        rare: [{
+                }],
+            },
+            chance: {
+                type: Number
+            }
+        },
+        /*rare: [{
             card: [{
                 image: {
                     type: String,
@@ -39,8 +39,8 @@ const PackSchema = new mongoose.Schema({
                     type: Number
                 }
             }]
-        }]
-    }]
+        }]*/
+    }
 });
 
 module.exports = Pack = mongoose.model('pack', PackSchema);
