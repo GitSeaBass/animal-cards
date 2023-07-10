@@ -1,3 +1,41 @@
 *{
   background-color: rgb(1, 63, 1);
 }
+
+.main{
+  margin-top: 5em;
+}
+
+.packs {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: 10px;
+}
+
+.pack{
+  background-color: red;
+  height: 400px;
+  padding: 10px 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.pack > img {
+  height: 300px;
+  border-radius: 3px;
+}
+
+.pack > button {
+  width: 20%;
+  height: 10%;
+  margin: auto;
+  background-color: white;
+  border: none;
+  border-radius: 20px;
+}
+
+.pack > button:hover {
+  background-color: gray;
+  transition: 0.5s;
+  
+}
