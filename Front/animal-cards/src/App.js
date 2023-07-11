@@ -1,10 +1,29 @@
 import './App.css';
+import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
+import Main from './components/Main';
+import Storepage from './components/Storepage';
 
 function App() {
   return (
+    <Router>
+      <div>
+        <Routes>
+          <Route exact path='/' element={<Main/>} />
+          <Route path='/store' element={<Storepage/>}/>
+        </Routes>
+      </div>
+    </Router>
+
+
+
+
+
+/*
     <div className="App">
       <header className="App-header">
         <div className='main'>
+          <Header />
+
           <div className='packs'>
             
             <div className='pack'>
@@ -24,7 +43,7 @@ function App() {
 
         </div>
       </header>
-    </div>
+    </div>*/
   );
 }
 

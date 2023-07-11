@@ -1,0 +1,18 @@
+.header {
+    display: flex;
+    gap: 10%;
+    justify-content: flex-end;
+    padding-right: 10%;
+    background-color: gray;
+}
+
+.header > h3 {
+    color: black;
+    background-color: gray;
+}
+
+.header > h3:hover {
+    text-decoration: underline;
+    color: rgb(5, 5, 99);
+    cursor: pointer;
+}

@@ -1,0 +1,34 @@
+.banner {
+    position: relative;
+    background-color: navy;
+    color: black;   
+}
+
+.bannertitle {
+    padding-left: 40px;
+    color: white;
+    padding-top: 10px;
+}
+
+.tempimage {
+    width: 100%;
+    height: 350px;
+    background-color: white;
+}
+
+.buybutton {
+    position: absolute;
+    bottom: 60px;
+    right: 150px; 
+    height: 60px;
+    width: 200px;
+    border: none;
+    background-color: transparent;
+    font-size: 1.5em;
+    border-radius: 20px;
+}
+
+.buybutton:hover {
+    transition: 0.5s;
+    background-color: rgb(49, 199, 245);
+}
