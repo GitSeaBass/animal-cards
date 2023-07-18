@@ -6,12 +6,21 @@
     background-color: gray;
 }
 
-.header > h3 {
+#value:hover {
+    text-decoration: none;
+    cursor: default;
     color: black;
-    background-color: gray;
 }
 
-.header > h3:hover {
+a{
+    text-decoration: none;
+}
+
+a:visited{
+    color: black;
+}
+
+a:hover{
     text-decoration: underline;
     color: rgb(5, 5, 99);
     cursor: pointer;
