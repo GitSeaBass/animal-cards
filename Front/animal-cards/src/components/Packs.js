@@ -1,15 +1,36 @@
+import { useState } from 'react';
 import './Pack.css'
 
 function Packs() {
 
-    const dummyitems = ['1','2','3','4','5','6']
+    const dummyitems = [
+        'https://as2.ftcdn.net/v2/jpg/05/61/14/29/1000_F_561142938_tx6VD3Zh1Cu8xhSv2SMFpZlKC6zGOYXf.jpg',
+        'https://as2.ftcdn.net/v2/jpg/05/61/14/29/1000_F_561142938_tx6VD3Zh1Cu8xhSv2SMFpZlKC6zGOYXf.jpg',
+        'https://as2.ftcdn.net/v2/jpg/05/61/14/29/1000_F_561142938_tx6VD3Zh1Cu8xhSv2SMFpZlKC6zGOYXf.jpg',
+        'https://as2.ftcdn.net/v2/jpg/05/61/14/29/1000_F_561142938_tx6VD3Zh1Cu8xhSv2SMFpZlKC6zGOYXf.jpg',
+        'https://as2.ftcdn.net/v2/jpg/05/61/14/29/1000_F_561142938_tx6VD3Zh1Cu8xhSv2SMFpZlKC6zGOYXf.jpg',
+        'https://as2.ftcdn.net/v2/jpg/05/61/14/29/1000_F_561142938_tx6VD3Zh1Cu8xhSv2SMFpZlKC6zGOYXf.jpg']
+
+    const [packOpened, setPackOpened] = useState(false);
+
+    const addPackOpened = () => {
+        setPackOpened(() => {
+            if (packOpened) {
+                return false;
+            } else {
+                return true;
+            }
+        })
+    }
 
     return (
-        <div className="packgrid">
-            {dummyitems.map((item) => (
-                <div>{item}</div>
-            ))}
-        </div>
+        <>
+            <div className="packgrid">
+                {packOpened ? <div className='test' id='test1' onClick={addPackOpened}></div> : dummyitems.map((item) => (
+                    <img src={item} alt='fox' className='cards' onClick={addPackOpened}></img>
+                ))}
+            </div>
+        </>
     );
 }
 

@@ -2,4 +2,21 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     justify-items: center;
+    gap: 10px 0px;
+}
+
+.cards {
+    height: 200px;
+    width: 80%;
+}
+
+.test {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    bottom: 100px;
+}
+
+#test1 {
+    background-color: red;
 }
